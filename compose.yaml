@@ -1,3 +1,4 @@
+# read more on https://www.codingforentrepreneurs.com/shorts/how-i-use-redis-for-new-projects-with-docker-compose/
 version: '3.9'
 services:
     redis:
@@ -10,3 +11,7 @@ services:
         entrypoint: redis-server --appendonly yes
 volumes:
     data:
+
+networks:
+  default:
+    name: scrape_scheduler_network
